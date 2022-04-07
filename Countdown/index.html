@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Countdown | GR projects</title>
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="icon" href="../JSicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="icons">
+                <button class="trash-btn" >
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
+                <button class="modal-btn">
+                    <i class="fas fa-hourglass-half "></i>
+                </button>
+                <button onclick="changeTheme()">
+                    <i class="fas fa-adjust"></i>
+                </button>
+            </div>
+        </nav>
+        <div class="modal-overlay">
+            <div class="modal">
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+                <form class="modal">
+                    <label for=""><h2>Set New Countdown Date</h2></label>
+                    <input type="datetime-local" class="get-date">
+                </form>
+                <button class="submit-btn" onclick="getuserDate()">submit</button>
+            </div>
+        </div>
+        <div class="title">
+            <h1>we're launching soon</h1>
+        </div>
+        <div class="countdown">
+            <section class="counter">
+                <div class="change-number">
+                    <div class="box top"><h3 class="number days">00</h3></div>
+                    <div class="box bottom"></div>
+                </div>
+                <h2>days</h2>
+            </section>
+            <section class="counter">
+                <div class="change-number">
+                    <div class="box top">
+                        <h3 class="number hours">00</h3>
+                    </div>
+                    <div class="box bottom"></div>
+                </div>
+                <h2>hours</h2>
+            </section>
+            <section class="counter">
+                <div class="change-number">
+                    <div class="box top">
+                        <h3 class="number minutes">00</h3>
+                    </div>
+                    <div class="box bottom"></div>
+                </div>
+                <h2>minutes</h2>
+            </section>
+            <section class="counter">
+                <div class="change-number">
+                    <div class="box top">
+                        <h3 class="number seconds">00</h3>
+                    </div>
+                    <div class="box bottom"></div>
+                </div>
+                <h2>seconds</h2>
+            </section>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+
+<script src="./main.js"></script>
+<script src="./darkMode.js"></script>
+</body>
+</html>

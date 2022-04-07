@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+
+:root{
+
+    /*colors*/
+
+    --apple-green: #93A748;
+    --brick-red: #BF5138;
+    --greyish: #F2E6CE;
+    --dark-greyish: #DDD2BC;
+    --font-color1: #f2e6cd;
+    --font-color2: #0f594d; 
+
+    /*fonts*/
+    --ff-primary:'Open Sans', sans-serif;
+    --ff-secondary:'Merriweather', serif;;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+}
+
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    color: #fff;
+
+    background: #fff;
+    text-transform: capitalize;
+
+}
+
+
+
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 2.1rem;
+  font-weight: 300;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  font-size: 1rem;
+  font-family: var(--ff-secondary);
+  line-height: 2;
+}
+
+/* ------------------------------------- 2. BODY ---------------------------------- */
+
+
+
+
+/* ------------------------------------- 3. CONTAINER ---------------------------------- */
+
+.main-screen{
+  background-color: var(--apple-green);
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-screen h1{
+  color: #fff;
+}
+
+.buttons{
+  display: grid;
+  margin-left: auto;
+  margin-right: 3vw;
+  position: fixed;
+  right: 0; 
+}
+
+.up-arrow{
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+  display: none;
+}
+
+
+.screen{
+  width: auto;
+  height: 100vh;
+  
+}
+
+.text{
+  padding: 40vh 0 10vh 10vw;
+  width: 630px;
+  color: var(--font-color);
+}
+
+@media screen and (max-width: 600px){
+
+  .text {
+    padding: 20vh 0 10vh 10vw;
+    width: 70vw;
+  }
+  .main-screen h1{
+    font-size: 1.3rem;
+    width: 70vw;
+  }
+
+}
+
+.page1{
+  background-image: url("./img/img-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.page2{
+  background-image: url("./img/img-2.jpg");
+  background-position:  center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--font-color2);
+}
+.page3{
+  background-image: url("./img/img-3.jpg");
+  background-position:  center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.page4{
+  background-image: url("./img/img-4.jpg");
+  background-position:  center;
+  background-size: cover;
+  background-attachment: fixed;
+}

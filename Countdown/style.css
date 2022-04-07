@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;700&display=swap');
+
+
+:root{
+
+    /*colors*/
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --shadow-dark-blue:#1A1823;
+    --dark-blue: hsl(235, 16%, 14%);
+    --very-dark-blue: hsl(234, 17%, 12%);
+
+    /*fonts*/
+    --ff-primary: 'Red Hat Text', sans-serif;
+    --ff-condense: 'Open Sans Condensed', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+
+    --hills-image: url("./images/pattern-hills.svg") ;
+    --stars-image: url("./images/bg-stars.svg");
+}
+
+
+.dark-theme {
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --soft-red: hsl(345, 95%, 68%);
+  --very-dark-blue: hsl(234, 17%, 12%);
+  --hills-image: url("./images/pattern-hills.svg");
+  --stars-image: url("./images/bg-stars.svg");
+
+}
+.light-theme {
+  --dark-desaturated-blue: hsl(192, 51%, 56%);
+  --very-dark-blue: hsl(197, 49%, 74%);
+  --soft-red: hsl(0, 0%, 98%);
+  --shadow-dark-blue:hsl(197, 27%, 47%);
+  --hills-image: url("./images/pattern-hills-day.svg");
+  --stars-image: url("");
+
+}
+
+
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 1.2rem;
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+h2 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: var(--grayish-blue);
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  padding: 9px 0 ;
+}
+
+/* ------------------------------------- 2. BODY ---------------------------------- */
+
+body{
+    font-family: var(--ff-primary);
+    font-size: 14px;
+
+    display: grid;
+    text-align: center;
+    background-color: var(--very-dark-blue) ;
+    color: #fff;
+
+    background-image: var(--stars-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------------- 3. MAIN ---------------------------------- */
+
+
+main{
+  background: var(--hills-image) no-repeat center bottom;
+  background-size: 100%;
+
+  height: 100vh ;
+  width: 100vw;
+}
+
+
+.title{
+  margin-top: 70px;
+  
+  
+}
+
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px;
+}
+.icons button{
+  margin: 0 10px;
+  color: var(--soft-red);
+  cursor: pointer;
+}
+.icons button:hover{
+  color: #fff;
+  transition: var(--transition);
+}
+
+.countdown{
+  margin: 40px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+}
+
+@media screen and (min-width: 600px) {
+  .countdown{
+     margin: 70px 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+
+.box{
+  height: 65px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: var(--dark-desaturated-blue);
+}
+
+
+.change-number{
+  margin-bottom: 20px;
+}
+
+
+
+.top{
+  opacity: 60%;
+  
+}
+
+
+.bottom{
+  box-shadow: 5px 5px var(--shadow-dark-blue);
+
+}
+
+
+.number{
+  font-size: 4rem;
+  position: relative;
+  top: 25px;
+  color: var(--soft-red);
+}
+
+.modal-overlay{
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  top: 0;
+  left: 0;
+
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+
+/* ----------------------  modal ---------------------- */
+
+.modal{
+  background: var(--dark-blue);
+  width: max(30vw,300px);
+  height: max(40vh,250px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  place-items: center;
+  position: relative;
+}
+
+.close-btn{
+  align-self: flex-end;
+  margin: 20px;
+  color: var(--grayish-blue);
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.close-btn:hover{
+  /* color: var(--soft-red); */
+  
+  border: 1px solid var(--soft-red); 
+}
+
+
+.modal input, .modal button{
+    border:none;
+    background-image:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; 
+}
+
+.modal input{
+  margin-top: 20px;
+  padding: 0 20px;
+  background-color: var(--soft-red);
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  margin-bottom: 60px;
+  color: var(--grayish-blue);
+  background-color: var(--dark-desaturated-blue);
+  height: 70px ;
+  width: 90px;
+  border-radius: 35px;
+}
+
+.submit-btn:hover{
+  border: 1px solid var(--soft-red);
+  background-color: var(--dark-blue);
+}
+

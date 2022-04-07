@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+:root{
+
+    /*colors*/
+    --color-1: #43202f; 
+    --color-2: #72a987; 
+    --color-3: #edeade;
+
+    /*fonts*/
+    --ff-primary: 'Lora', serif;
+    --ff-condense: 'Open Sans Condensed', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+}
+
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+h3,button {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+p{
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+ 
+/* ------------------------------------- 2. BODY ---------------------------------- */
+
+body{
+    color: #edeade;
+    background-color: var(--color-1);
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    display: grid;
+    text-align: center;
+
+}
+
+/* ------------------------------------- 3. MAIN ---------------------------------- */
+
+.nav-header{
+  padding-top: 40px;
+  height: max(25vh,100px);
+}
+
+.filter{
+  color: #fff;
+  font-family: sans-serif;
+  padding: 5px;
+  width: 80px;
+  height: 40px;
+  border: 1px solid rgb(49, 3, 3);
+}
+
+.filter:hover, filter:active{
+  border: 2px solid var(--color-2);
+  transition: var(--transition);
+}
+
+
+.grid-container{
+  height: max(75vh,300px);
+}
+.project{
+  z-index: 3;
+  transition: 0.5s;
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max(25vh,100px);
+  transition: var(--transition);
+  
+}
+
+
+
+
+.project1{
+  
+  background-image: url("./img/photo-1.jpg") ;
+    background-position: 50% 35%;
+  background-size: cover;
+
+}
+
+.project2{
+    background-image: url("./img/photo-4.jpg") ;
+    background-position: 50% 35%;
+    background-size: cover;
+
+
+}
+
+.project3{
+    background-image: url("./img/photo-7.jpg") ;
+    background-position: 50% 35%;
+    background-size: cover;
+}
+
+.grid-box{
+  position: relative;
+}
+
+.close-btn{
+  z-index: 11;
+  color: var(--color-3);
+  background-color: black;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  position: absolute;
+  visibility: hidden;
+  right:20px;
+  top: -20vh;
+}
+
+/*-----------show text--------------*/
+
+.project-description{
+  display: none;
+  color: var(--color-1);
+  background-color: #fff;
+}
+
+.show-text {
+  display: grid;
+  width: 100%;
+  z-index: 10;
+}
+
+.show-text h1{
+  height: 60vh;
+  width: 100%;
+}
+
+.show-text button{
+  visibility: visible;
+}
+
+.show-text p{
+  z-index: 2;
+  position: absolute;
+  display: block;
+  height: max-content;
+  width: 100%;
+  padding: 100px 10vw 50px 10vw;
+  margin-top: 70px;
+  text-align: left;
+  color: var(--color-1);
+}
+
+@media screen and (min-width: 1200px) {
+
+.show-text p{
+  height: 100%;
+}
+
+}

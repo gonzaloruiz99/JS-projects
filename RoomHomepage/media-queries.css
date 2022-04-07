@@ -1,0 +1,50 @@
+@media screen and (min-width: 800px) {
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    /*nav bar*/
+    .nav-center {
+        max-width: 80vw;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+    .toggled{
+        background-color: transparent;
+    }
+    .nav-toggle{
+        display: none;
+    }
+
+
+    .links{
+    display: flex;
+    margin-left: 1rem;
+    height: auto;
+    }
+    .links a{
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    
+
+/*----grid-container----*/
+.arrows{
+    position:relative;
+    left: 120px;
+}
+
+/*----about-----*/
+    .about{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+}
+
+
+
+}

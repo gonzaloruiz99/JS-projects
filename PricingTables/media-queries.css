@@ -1,0 +1,27 @@
+
+@media screen and (max-width: 800px) {
+
+
+    
+.main-container{
+    display: grid;
+    grid-template-columns: 19vw 60vw 19vw;
+    
+
+}
+
+.grid-container{
+    width: 60vw;
+    grid-column-start: 2;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+
+.bottom-info button{
+    width: min(250px,50vw);
+    border-radius: 20px;
+}
+
+
+}

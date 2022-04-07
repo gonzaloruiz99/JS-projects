@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce | GR projects</title>
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="icon" href="../JSicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media-queries.css">
+    
+    <script src="https://kit.fontawesome.com/e3a0afb10c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+<body>
+        <nav>
+            <div class="nav-center">
+                <!-- nav-header -->
+                <article class="nav-header">
+                    <div class="nav-menu">
+                        <button class="nav-toggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <img src="./images/logo.svg" alt="sneakers-logo">
+                    </div>
+
+                    <!-- links -->
+                    <ul class="links">
+                        <li><a href="#">collection</a></li>
+                        <li><a href="#">men</a></li>
+                        <li><a href="#">women</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </article>
+                <article class="cart-user">
+                    <p class="cart-num"></p>
+                    <button class="e-cart">
+                        <img src="./images/icon-cart.svg" alt="cart">
+                    </button>
+                    <a href="#">
+                        <img src="./images/image-avatar.png" class="avatar-img" alt="profile-img">
+                    </a>
+                </article>     
+            </div>
+        </nav>
+        <div class="main-container">
+            <article class="images-gallery">
+                <section class="main-img">
+                    <img class="mainImg" id="main_img" src="./images/image-product-1.jpg" alt="">
+                </section>
+                <ul class="gallery">
+                    <li><img  class="thumbnail-img" id="n1" src="./images/image-product-1-thumbnail.jpg" alt=""></li>
+                    <li><img  class="thumbnail-img" id="n2" src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+                    <li><img  class="thumbnail-img" id="n3" src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+                    <li><img  class="thumbnail-img" id="n4" src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+                </ul>
+            </article>
+
+
+
+            <article class="modal-overlay">
+                <div class="modal-container">
+                        <article class="images-gallery">
+                            <section class="main-img" >
+                                <div class="modal_btn-container">
+                                    <button class="left-btn">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </button>
+                                    <button class="right-btn">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </button>
+                                </div>
+                                <img class="mainImg" id="modal-main_img" src="./images/image-product-1.jpg" alt="">
+                                
+                            </section>
+                            <ul class="gallery">
+                                <li><img class="thumbnail-img" id="modal_n1" src="./images/image-product-1-thumbnail.jpg" alt=""></li>
+                                <li><img class="thumbnail-img" id="modal_n2" src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+                                <li><img class="thumbnail-img" id="modal_n3" src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+                                <li><img class="thumbnail-img" id="modal_n4" src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+                            </ul>
+                        </article>
+                    <button class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </article>
+
+            
+            <article class="images-info">
+                <h3 class="company">sneaker company</h3>
+                <h1 class="title">Fall Limited Edition Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+                    durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                <div class="cart">
+                    <div class="price">
+                        <ul class="main-price">
+                            <li>
+                                <h1>$125.00</h1>
+                            </li>
+                            <li>
+                                <h3 class="discount">50%</h3>
+                            </li>
+                        </ul>
+                        <h3 class="last-price">$250.00</h3>
+                    </div>
+                    <form class="" onsubmit=" handleSubmit(event)">
+                        <div class="buttonIn">
+                            <button type="button" class="btn minus">
+                                <img src="./images/icon-minus.svg" alt="">
+                            </button>
+                            <input type="text" id="enter" class="quantity" value="0" onchange="handleChange(value)">
+                            <button type="button" class="btn plus">
+                                <img src="./images/icon-plus.svg" alt="">
+                            </button>
+
+                        </div>
+                        <button class="add-to-cart" onsubmit="">
+                            <img src="./images/icon-cart.svg" class="cart-icon" alt="cart">
+                            add to cart
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

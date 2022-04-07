@@ -1,0 +1,35 @@
+[
+    {
+        "id":1,
+        "title": "basic",
+        "price": 30,
+        "memory": "256MB",
+        "user": 1,
+        "website": 1,
+        "domain": 1,
+        "bandwidth": "unlimited",
+        "support": "24/7"
+    },
+    {
+        "id": 2,
+        "title": "popular",
+        "price": 60,
+        "memory": "512MB",
+        "user": 3,
+        "website": 5,
+        "domain": 7,
+        "bandwidth": "unlimited",
+        "support": "24/7"
+    },
+    {
+        "id": 3,
+        "title": "premier",
+        "price": 90,
+        "memory": "1024MB",
+        "user": 5,
+        "website": 10,
+        "domain": 10,
+        "bandwidth": "unlimited",
+        "support": "24/7"
+    }
+]

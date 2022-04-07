@@ -1,0 +1,222 @@
+
+
+
+/* ------------------ Table of Contents ----------------- 
+0. Root
+1. Main config
+2. Green header
+7. Footer
+--------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+:root{
+    /*colors*/
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+    /*fonts*/
+    --ff-primary: 'Spartan', sans-serif;
+    --transition: 0.4s;
+}
+
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 2em;
+}
+
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  line-height: 1.8;
+  font-size: 0.8rem;
+  color: var(--Dark-Gray);
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* ------------------------------------- 2. NAV BAR ---------------------------------- */
+
+.nav-center{
+  position: absolute;
+  display: grid;
+  padding-top: 1rem;
+  width: 100vw;
+  transition: var(--transition);
+  
+}
+.toggled{
+  background-color: rgba(207, 206, 206, 0.5);
+}
+.nav-header{
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  
+}
+
+.links a{
+  color: #fff;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  width: min-content;
+}
+
+.links a:hover{
+  color: #94989A ;
+}
+
+.links{
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+
+}
+
+.show-links{
+  height: 9rem;
+}
+
+.rotate{
+  transform: rotate(90deg);
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  margin-right: 10px;
+}
+.nav-toggle:hover {
+  color:var(--Very-Dark-Gray);
+}
+
+
+
+/* ------------------------------------- 3. IMAGE-GALLERY  ---------------------------------- */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.image-gallery{
+  position: relative;
+  background: url("./images/desktop-image-hero-1.jpg") no-repeat ;
+  transition: .5s;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  
+
+}
+
+/*arrow css*/
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.arrow:hover{
+}
+/*end arrow css*/
+
+
+/* ------------------------------------- 3. IMAGE-INFO  ---------------------------------- */
+
+
+.image-info{
+  display: grid;
+  text-align: left;
+  margin: 10%; 
+  
+}
+
+
+.image-info h3{
+  padding-top: 15px;
+}
+.image-info h3:hover{
+  opacity: 50%;
+  transition: var(--transition);
+}
+
+.arrows{
+display: flex;
+align-self: flex-end;
+margin-left: auto;
+}
+
+.arrows button{
+  background:hsl(0, 0%, 0%);
+  height: 60px;
+  width: 60px;
+}
+.arrows button:hover, .arrows button:active{
+  background: var(--Dark-Gray);
+  transition: var(--transition);
+}
+
+/* ------------------------------------- 4. ABOUT-GRID  ---------------------------------- */
+
+.about{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.about-info{
+  padding:0;
+  margin: 40px 10%;
+}
+
+
+.about img{
+  width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+}
+

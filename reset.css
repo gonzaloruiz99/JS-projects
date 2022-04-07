@@ -1,0 +1,54 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul {
+  list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+
+.attribution{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  left: 30px;
+  top: 0;
+  font-size: 0.6rem;
+  background-color: rgba(0,0,0,0.2);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: rgba(255,255,255,0.6);
+  margin:  2px 0;
+}
+.attribution a:hover{
+  color: rgba(255,255,255,1);
+}
