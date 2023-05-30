@@ -2,8 +2,6 @@
 
 
 :root {
-    --clr-light-blue: rgb(119, 184, 210);
-    ;
     --clr-orange: #E18C1D;
 }
 
@@ -37,6 +35,27 @@ nav{
 }
 .link:hover{
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 800px) {
+    nav {
+        padding: 30px 20px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .link {
+        padding: 0 15px;
+        font-size: 14px;
+    }
 }
 
 
@@ -129,15 +148,4 @@ footer{
     margin: 10px;
     width: 30px;
 }
-@media screen and (max-width: 800px) {
-    footer{
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        height: max-content;
-    }
-    footer div,ul{
-        margin: 40px;
-    }
-        
-}
+
